@@ -218,7 +218,7 @@ class Spree::Admin::PosController < Spree::Admin::BaseController
     @order.ship_address = @order.user.ship_address
     @order.email = current_user.email
     @order.save!
-    method = Spree::ShippingMethod.find_by_name SpreePos::Config[:pos_shipping]
+    method = Spree::ShippingMethod.find_by_name "Nouto liikkeestämme"
     @order.shipping_method = method || Spree::ShippingMethod.first
     @order.create_shipment!
     session[:pos_order] = @order.number

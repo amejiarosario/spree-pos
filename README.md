@@ -51,10 +51,8 @@ You can install spree-product-barcodes to print product labels if need be. Other
 Configure
 =========
 
-An Order must be shipped, so you must configure a ShippingMethod to be used. If you don't the first will be
-taken, rarely what you want.
+An Order must be shipped, so you must configure a ShippingMethod to be used in the controller
 
-SpreePos::Config.set(:pos_shipping => "MethodName") #Usually something like "pickup" with cost 0
 
 POS uses the first Spree::PaymentMethod::Check in the current environment for payment. So this is actually not configurable, but the PaymentMethod has to be configured for POS to work
 
